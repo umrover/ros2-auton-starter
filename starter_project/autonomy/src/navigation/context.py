@@ -22,6 +22,10 @@ from visualization_msgs.msg import Marker
 
 @dataclass
 class Rover:
+    """
+    Context class to represent the rover
+    Includes functions to drive the rover and information on its pose
+    """
     ctx: Context
 
     def get_pose(self) -> Optional[SE3]:

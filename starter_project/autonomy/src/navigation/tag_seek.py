@@ -4,7 +4,6 @@ from context import Context
 from state_machine.state import State
 from state import DoneState, FailState
 
-
 class TagSeekState(State):
     def on_enter(self, context) -> None:
         pass
@@ -13,8 +12,10 @@ class TagSeekState(State):
         pass
 
     def on_loop(self, context) -> State:
+        # rover angular and distance tolerances
         DISTANCE_TOLERANCE = 0.995
         ANUGLAR_TOLERANCE = 0.3
+
         # TODO: get the tag's location and properties (HINT: use get_fid_data() from context.env)
 
         # TODO: if we don't have a tag: go to the FailState
