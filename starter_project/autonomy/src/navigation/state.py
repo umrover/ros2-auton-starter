@@ -16,8 +16,7 @@ class DoneState(State):
 
     def on_loop(self, context) -> State:
         # Stop the rover by sending a zero drive command
-        cmd_vel = Twist()
-        context.rover.send_drive_command(cmd_vel)
+        context.rover.send_drive_stop()
         return self
 
 
@@ -30,6 +29,5 @@ class FailState(State):
 
     def on_loop(self, context) -> State:
         # Stop the rover by sending a zero drive command
-        cmd_vel = Twist()
-        context.rover.send_drive_command(cmd_vel)
+        context.rover.send_drive_stop()
         return self

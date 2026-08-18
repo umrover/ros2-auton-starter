@@ -53,7 +53,7 @@ class Navigation(Node):
 
 def main():
     try:
-        # TODO: initialize a node called "navigation"
+        # TODO: initialize a node
 
         # Context and Navigation objects
         context = Context()

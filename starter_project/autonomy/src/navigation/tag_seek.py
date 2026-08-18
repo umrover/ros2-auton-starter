@@ -18,11 +18,11 @@ class TagSeekState(State):
 
         # TODO: get the tag's location and properties (HINT: use get_fid_data() from context.env)
 
-        # TODO: if we don't have a tag: go to the FailState
+        # TODO: if we don't have a tag (None or -1): go to the FailState
 
-        # TODO: if we are within angular and distance tolerances: go to DoneState
+        # TODO: if we are within angular and distance tolerances: go to DoneState (HINT: use tag.x_tag_center_pixel and tag.closeness_metric)
 
-        # TODO: figure out the Twist command to be applied to move the rover closer to the tag
+        # TODO: figure out the Twist command to be applied to move the rover closer to the tag (HINT: Think about how the heading of the rover should be orientated before driving to the tag)
 
         # TODO: send Twist command to rover
 

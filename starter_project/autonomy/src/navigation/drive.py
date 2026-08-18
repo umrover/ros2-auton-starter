@@ -57,7 +57,7 @@ def get_drive_command(
         cmd_vel.linear.x = np.clip(error, 0.0, MAX_DRIVING_EFFORT)
     
     # Determine the sign of our effort by seeing if we are to the left or to the right of the target
-    # This is done by dotting rover_dir and target_dir rotated 90 degrees counter clock wise
+    # This is done by obtaining the cross product between the rover_dir and target_dir 
     perp_alignment = target_dir[0] * -rover_dir[1] + target_dir[1] * rover_dir[0]
     sign = np.sign(perp_alignment)
 
