@@ -28,7 +28,7 @@ class TagSeekState(State):
         else:
             self.cur_failed_detections = 0
         
-        if self.cur_failed_detections == 10:
+        if self.cur_failed_detections >= TAG_FAILURE_TOLERANCE:
             return FailState()
 
         # TODO: if we are within angular and distance tolerances: go to DoneState (HINT: use tag.x_tag_center_pixel and tag.closeness_metric)
